@@ -1,0 +1,142 @@
+/* Estilos Header*/
+
+    .header {
+        height: 650px;
+        width: 100%;
+
+        .header__img {
+            width: 100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .header__nav{
+        @include header-nav;
+        &--menu {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .nav__ul {
+        display: none;
+    }
+
+    .article {
+        @include article-box;
+        
+        .title__header {
+            @include titulo;
+        }
+    }
+
+    /* Containers primario */
+
+    .img-vrguy{
+        width: 320px;
+        height: 270px;
+        margin: 60px 26.15px 40px 26.15px;
+    }
+
+    .main-article {
+        text-align: center;
+        margin-bottom: 60px;
+        .article__h2{
+            color: $black;
+            font-family: $font-title;
+            font-size: 4.0em;
+            margin-bottom: 20px;
+        }
+        
+        .article__p{
+            color: $dark-gray;
+            font-family: $font-text;
+            font-size: 2.0em;
+            padding: 0 16px 0 16px;
+        }
+    }
+
+    .div__container {
+        text-align: center;
+        margin-bottom: 30px;
+        .title__middle {
+            color: $black;
+            font-family: $font-title;
+            font-size: 3.5em;
+            font-weight: 200;
+            align-items: baseline;
+        }
+        .middle__button {
+            display: none;
+        }
+    }
+
+    /* Seccion contenedor Imagene*/
+
+    .subcontainer {
+        width: 375px;
+        height: 132px;
+        margin-bottom: 20px;
+        text-align: center;
+        .subcontainer__img{
+            background-origin: content-box;
+            background-repeat: no-repeat;
+            width: 360px;
+        }
+        .subcontainer__text{
+            position: relative;
+            bottom: 80px;
+            left: 30px;
+            z-index: 1;
+            text-align: left;
+            color: $white;
+            font-family: $font-title;
+            font-size: 3.0em;
+            width: 50%;
+        }
+    }
+
+    .container__button{
+        display: flex;
+        justify-content: center;
+        .button {
+            @include button;
+        }
+    }
+
+    /* Footer section */
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        background-color: $black;
+        margin-top: 50px;
+        .header__nav--img {
+            margin: 30px 0 30px 50px;
+            
+        }
+        .footer__ul--li{
+            color: $white;
+            font-family: $font-text;
+            text-align: center;
+            list-style-type: none;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+        .icons{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .icons__social{
+                margin-left: 20px;
+            }
+        }
+        .footer__text{
+            font-family: $font-text;
+            color: $very-dark-gray;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+    }

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Colores */
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 55%);
+$very-dark-gray: hsl(0, 0%, 41%);
+
+/* Fonts families */
+$font-text: 'Alata', sans-serif;
+$font-title: 'Josefin Sans', sans-serif;
+
+/* Mixins vista MOBILE*/ 
+
+@mixin header-nav{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 600px;
+    z-index: 1;
+}
+
+@mixin article-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 500px;
+    z-index: 1;
+    border: 2px solid white;
+    height: 240px;
+    width: 85%;
+    margin: 0 auto;
+}
+    
+@mixin titulo {
+    color: $white;
+    font-family: $font-title;
+    font-size: 4.0em;
+    text-align: left;
+    vertical-align: text-bottom;
+}
+
+@mixin button {
+        color: $black;
+        font-family: $font-title;
+        font-size: 2.0em;
+        font-weight: bold;
+        border: 2px solid $black;
+        background-color: $white;
+        width: 150px;
+        height: 40px;
+}
+
+/* mixins vista TABLET*/
+
+@mixin menu {
+        display: inline;
+        color: $white;
+        font-family: $font-text;
+        font-size: 1.6em;
+        list-style-type: none;
+        margin-left: 10px;
+}
+
+@mixin main_article {
+    position: relative;
+    z-index: 1;
+    left: 400px;
+    bottom: 100px;
+    width: 320px;
+    height: 230px;
+    background-color: $white;
+    margin-bottom: 0px;
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+@mixin article-h2 {
+        color: $black;
+        font-family: $font-title;
+        font-size: 3.0em;
+        margin-bottom: 20px;
+        font-weight: 200;
+}
+
+@mixin article-p {
+        color: $dark-gray;
+        font-family: $font-text;
+        font-size: 1.2em;
+        padding: 0 0 0 0;
+        width: 80%;
+        text-align: left;
+        margin-left: 35px;
+}
+
+
+@mixin media ($breakpoint) {  
+
+    @if $breakpoint == tablet {  
+      @media only screen and (min-width: 768px) { @content; }  
+    }  
+    
+    @else if $breakpoint == desktop-s {  
+      @media only screen and (min-width: 992px) { @content; }  
+    } 
+    
+    @else if $breakpoint == desktop-m {  
+      @media only screen and (min-width: 1200px) { @content; }  
+    } 
+    
+    @else if $breakpoint == desktop-l {  
+      @media only screen and (min-width: 1240px) { @content; }  
+    } 
+    
+    @else if $breakpoint == desktop-xl {  
+      @media only screen and (min-width: 1780px) { @content; }  
+    } 
+  
+    @else if $breakpoint == mobile-only {  
+      @media only screen and (max-width: 375px) { @content; }  
+    }
+  
+    @else if $breakpoint == tablet-p-only {  
+      @media only screen and (min-width: 768px) and (max-width: 992px) and (orientation : portrait) { @content; }  
+    }  
+    
+    @else if $breakpoint == tablet-l-only {  
+      @media only screen and (min-width: 768px) and (max-width: 992px) and (orientation : landscape) { @content; }  
+    } 
+    
+    @else if $breakpoint == desktop-s-only {  
+      @media only screen and (min-width: 768px) and (max-width: 1200px) { @content; }  
+    } 
+    
+    @else if $breakpoint == desktop-m-only {  
+      @media only screen and (min-width: 1200px) and (max-width: 1480px) { @content; }  
+    } 
+  } 

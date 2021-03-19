@@ -1,0 +1,50 @@
+@include media (desktop-l){
+    .article {
+        height: 300px;
+        margin-left: 185px;
+        width: 50%;
+    }
+
+    .img__desktop--vrguy {
+        position: relative;
+        left: 200px;
+        margin: 60px 0 0 0;
+        width: 600px;
+    }
+
+    .main-article {
+        position: relative;
+        left: 680px;
+        bottom: 120px;
+        width: 380px;
+        .article__p {
+            font-size: 1.6em;
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 256px);
+        grid-template-rows: repeat(2, 450px);
+        justify-content: center;
+        .subcontainer__img {
+            display: none;
+        }
+        .subcontainer__img--desktop{
+            display: block;
+        }
+        .subcontainer__text{
+            position: relative;
+            bottom: 90px;
+        }
+    }
+    
+    .footer {
+        
+        .footer__div {
+            display: grid;
+            column-gap: 530px;
+        }
+    }
+
+}

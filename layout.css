@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Colores */
+/* Fonts families */
+/* Mixins vista MOBILE*/
+/* mixins vista TABLET*/
+/* Estilos Header*/
+@media only screen and (max-width: 375px) {
+  .header {
+    height: 650px;
+    width: 100%;
+  }
+  .header .header__img--desktop {
+    display: none;
+  }
+  .header .header__img {
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header__nav {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 600px;
+    z-index: 1;
+  }
+  .header__nav--menu {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nav__ul {
+    display: none;
+  }
+
+  .article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 500px;
+    z-index: 1;
+    border: 2px solid white;
+    height: 240px;
+    width: 85%;
+    margin: 0 auto;
+  }
+  .article .title__header {
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4em;
+    text-align: left;
+    vertical-align: text-bottom;
+  }
+
+  /* Containers primario */
+  .img-vrguy {
+    width: 320px;
+    height: 270px;
+    margin: 60px 26.15px 40px 26.15px;
+  }
+
+  .main-article {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .main-article .article__h2 {
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4em;
+    margin-bottom: 20px;
+  }
+  .main-article .article__p {
+    color: #8c8c8c;
+    font-family: "Alata", sans-serif;
+    font-size: 2em;
+    padding: 0 16px 0 16px;
+  }
+
+  .div__container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .div__container .title__middle {
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.5em;
+    font-weight: 200;
+    align-items: baseline;
+  }
+  .div__container .middle__button {
+    display: none;
+  }
+
+  /* Seccion contenedor Imagene*/
+  .subcontainer {
+    width: 375px;
+    height: 132px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .subcontainer .subcontainer__img {
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    width: 360px;
+  }
+  .subcontainer .subcontainer__text {
+    position: relative;
+    bottom: 80px;
+    left: 30px;
+    z-index: 1;
+    text-align: left;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3em;
+    width: 50%;
+  }
+
+  .container__button {
+    display: flex;
+    justify-content: center;
+  }
+  .container__button .button {
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+  }
+
+  /* Footer section */
+  .footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    margin-top: 50px;
+  }
+  .footer .header__nav--img {
+    margin: 30px 0 30px 50px;
+  }
+  .footer .footer__ul--li {
+    color: white;
+    font-family: "Alata", sans-serif;
+    text-align: center;
+    list-style-type: none;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+  }
+  .footer .icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .footer .icons .icons__social {
+    margin-left: 20px;
+  }
+  .footer .footer__text {
+    font-family: "Alata", sans-serif;
+    color: dimgray;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+  }
+}
+/* Header */
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 650px;
+  }
+
+  .header__img {
+    display: none;
+  }
+
+  .header__img--desktop {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header__nav--menu {
+    display: none;
+  }
+
+  .nav__ul {
+    display: block;
+  }
+  .nav__ul--li {
+    display: inline;
+    color: white;
+    font-family: "Alata", sans-serif;
+    font-size: 1.6em;
+    list-style-type: none;
+    margin-left: 10px;
+  }
+
+  .article {
+    margin-left: 60px;
+    width: 50%;
+  }
+
+  /* Empieza el primer contenedor del main*/
+  .main-article {
+    position: relative;
+    z-index: 1;
+    left: 400px;
+    bottom: 100px;
+    width: 320px;
+    height: 230px;
+    background-color: white;
+    margin-bottom: 0px;
+    padding: 30px 0 0 0;
+    text-align: center;
+  }
+  .main-article .article__h2 {
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 200;
+  }
+  .main-article .article__p {
+    color: #8c8c8c;
+    font-family: "Alata", sans-serif;
+    font-size: 1.2em;
+    padding: 0 0 0 0;
+    width: 80%;
+    text-align: left;
+    margin-left: 35px;
+  }
+
+  .img-vrguy {
+    display: none;
+  }
+
+  .img__desktop--vrguy {
+    width: 400px;
+    margin: 60px 0 0 60px;
+  }
+
+  /* Aqui empieza los estilos main */
+  .div__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .div__container .title__middle {
+    position: relative;
+    right: 30px;
+    padding-top: 5px;
+  }
+  .div__container .middle__button {
+    display: block;
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: repeat(3, 200px);
+    justify-content: center;
+    gap: 10px;
+  }
+  .container .subcontainer {
+    height: 100%;
+    width: 100%;
+  }
+  .container .subcontainer__img {
+    height: 100%;
+    width: 100%;
+  }
+  .container .subcontainer__img--desktop {
+    display: none;
+  }
+
+  .container__button {
+    display: none;
+  }
+
+  /* footer */
+  .footer__div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 70px);
+    grid-template-areas: "logo iconos" "servicios marca";
+    column-gap: 170px;
+  }
+  .footer__div .header__nav--img {
+    grid-area: logo;
+    margin: 30px 0 30px 0;
+  }
+  .footer__div .footer__ul {
+    display: flex;
+    flex-direction: row;
+    grid-area: servicios;
+  }
+  .footer__div .footer__ul--li {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+  .footer__div .icons {
+    justify-self: end;
+    grid-area: iconos;
+  }
+  .footer__div .icons__social {
+    height: 25px;
+    width: 25px;
+    order: 1;
+    place-self: center;
+  }
+  .footer__div .footer__text {
+    font-size: 1.2em;
+    grid-area: marca;
+    justify-self: end;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__div .header__nav--img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .footer__div .footer__ul {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .footer__div .icons {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .footer__div .footer__text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+}
+@media only screen and (min-width: 1240px) {
+  .article {
+    height: 300px;
+    margin-left: 185px;
+    width: 50%;
+  }
+
+  .img__desktop--vrguy {
+    position: relative;
+    left: 200px;
+    margin: 60px 0 0 0;
+    width: 600px;
+  }
+
+  .main-article {
+    position: relative;
+    left: 680px;
+    bottom: 120px;
+    width: 380px;
+  }
+  .main-article .article__p {
+    font-size: 1.6em;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 256px);
+    grid-template-rows: repeat(2, 450px);
+    justify-content: center;
+  }
+  .container .subcontainer__img {
+    display: none;
+  }
+  .container .subcontainer__img--desktop {
+    display: block;
+  }
+  .container .subcontainer__text {
+    position: relative;
+    bottom: 90px;
+  }
+
+  .footer .footer__div {
+    display: grid;
+    column-gap: 530px;
+  }
+}
+.header__nav--img {
+  cursor: pointer;
+}
+
+.header__nav--menu:hover {
+  cursor: pointer;
+}
+
+.nav__ul {
+  cursor: pointer;
+}
+
+.img-vrguy:hover {
+  cursor: pointer;
+}
+
+.subcontainer:hover {
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.middle__button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.footer__ul--li:hover {
+  cursor: pointer;
+}
+
+.icons__social:hover {
+  cursor: pointer;
+}
