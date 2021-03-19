@@ -1,0 +1,134 @@
+/* Header */ 
+@include media (tablet) {
+    .header {
+        height: 650px;
+    }
+    .header__img {
+        display: none;
+    }
+
+    .header__img--desktop {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header__nav--menu {
+        display: none;
+    }
+
+    .nav__ul {
+        display: block;
+        &--li {
+            @include menu;
+        }
+    }
+
+    .article {
+        margin-left: 60px;
+        width: 50%;
+    }
+
+    /* Empieza el primer contenedor del main*/
+
+    .main-article {
+        @include main_article;
+        .article__h2{
+            @include article-h2;
+        }
+        .article__p{
+            @include article-p;
+        }
+    }
+
+    .img-vrguy {
+        display: none;
+    }
+
+    .img__desktop--vrguy {
+        width: 400px;
+        margin: 60px 0 0 60px;
+    }
+
+    /* Aqui empieza los estilos main */
+
+    .div__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        .title__middle {
+            position: relative;
+            right: 30px;
+            padding-top: 5px;
+        }
+        .middle__button {
+            display: block;
+            @include button;
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(3, 200px);
+        justify-content: center;
+        gap: 10px;
+        .subcontainer{
+            height: 100%;
+            width: 100%;
+        }
+        .subcontainer__img {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .subcontainer__img--desktop {
+            display: none;
+        } 
+    }
+
+    .container__button {
+        display: none;
+    }
+
+    /* footer */
+
+    .footer__div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 70px);
+        grid-template-areas: 
+        "logo iconos"
+        "servicios marca";
+        column-gap: 170px;
+        .header__nav--img{
+            grid-area: logo;
+            margin: 30px 0 30px 0;
+        }
+        .footer__ul{
+            display: flex;
+            flex-direction: row; 
+            grid-area: servicios;
+        }
+        .footer__ul--li {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        .icons {
+            justify-self: end;
+            grid-area: iconos;
+        }
+        .icons__social {
+            height: 25px;
+            width: 25px;
+            order: 1;
+            place-self: center;
+        }
+        .footer__text {
+        font-size: 1.2em; 
+        grid-area: marca;
+        justify-self: end;
+        }
+    }
+}
